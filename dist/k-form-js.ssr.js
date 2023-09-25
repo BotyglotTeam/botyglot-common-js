@@ -1118,6 +1118,11 @@ var script$6 = {
     },
     prepend: {
       type:String,
+    },
+    suggest_value: {
+      type: String,
+      require: false,
+      default: "false"
     }
   },
   computed: {
@@ -1134,8 +1139,23 @@ var script$6 = {
         );
       }
     },
-
-  }
+    suggestValue: function(){
+      return (this.$props.suggest_value === 'true')
+    },
+    useSuggestedValue: function() {
+      return this.suggestValue
+    },
+    suggestedValue: function(){
+      return this.$store.getters.getSuggestedValues(this.$props.name)
+    },
+  },
+  watch: {
+    suggestedValue: function(value, _oldValue) {
+      if (this.useSuggestedValue) {
+        this.inputValue = value;
+      }
+    }
+  },
 };/* script */
 var __vue_script__$6 = script$6;
 
@@ -1148,7 +1168,7 @@ var __vue_staticRenderFns__$6 = [];
   /* scoped */
   var __vue_scope_id__$6 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$6 = "data-v-73dd1979";
+  var __vue_module_identifier__$6 = "data-v-5b08d70a";
   /* functional template */
   var __vue_is_functional_template__$6 = false;
   /* style inject */
