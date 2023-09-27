@@ -2702,23 +2702,23 @@ var FormStore = function FormStore(ref) {
   window.toto = "TOTO"; // temporary test to bust cache on CI
 
   var defaultComponents = {
-    'k-time': __vue_component__$f,
-    'k-autocomplete': __vue_component__,
-    'k-check_box': __vue_component__$1,
-    'k-date': __vue_component__$2,
-    'k-datetime': __vue_component__$3,
-    'k-input': __vue_component__$4,
-    'k-form': __vue_component__$5,
-    'k-hidden': __vue_component__$6,
-    'k-select': __vue_component__$9,
-    'k-monaco_editor': __vue_component__$7,
-    'k-quill_editor': __vue_component__$8,
-    'k-textarea': __vue_component__$b,
-    'k-submit': __vue_component__$a,
-    'k-label': __vue_component__$c,
-    'k-toggle-switch': __vue_component__$d,
-    'k-tel-input': __vue_component__$e,
-    'k-multi-check': __vue_component__$g
+    'botyglot-time': __vue_component__$f,
+    'botyglot-autocomplete': __vue_component__,
+    'botyglot-check_box': __vue_component__$1,
+    'botyglot-date': __vue_component__$2,
+    'botyglot-datetime': __vue_component__$3,
+    'botyglot-input': __vue_component__$4,
+    'botyglot-form': __vue_component__$5,
+    'botyglot-hidden': __vue_component__$6,
+    'botyglot-select': __vue_component__$9,
+    'botyglot-monaco_editor': __vue_component__$7,
+    'botyglot-quill_editor': __vue_component__$8,
+    'botyglot-textarea': __vue_component__$b,
+    'botyglot-submit': __vue_component__$a,
+    'botyglot-label': __vue_component__$c,
+    'botyglot-toggle-switch': __vue_component__$d,
+    'botyglot-tel-input': __vue_component__$e,
+    'botyglot-multi-check': __vue_component__$g
   };
 
   var modelName = Object.keys(values)[0];

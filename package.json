@@ -1,5 +1,5 @@
 {
-  "name": "k-form-js",
+  "name": "botyglot-common-js",
   "version": "0.1.9",
   "description": "Enhanced form components, inspired by formik, designed to work with server generated forms by Ruby on Rails",
   "author": {
@@ -8,10 +8,10 @@
     "url": "https://twitter.com/dorianlupu"
   },
   "contributors": [],
-  "license": "Private code that belongs to KUNDIGO SASU, FRANCE",
-  "main": "dist/k-form-js.ssr.js",
-  "module": "dist/k-form-js.esm.js",
-  "unpkg": "dist/k-form-js.min.js",
+  "license": "Private code that belongs to BOTYGLOT, FRANCE",
+  "main": "dist/botyglot-common-js.ssr.js",
+  "module": "dist/botyglot-common-js.esm.js",
+  "unpkg": "dist/botyglot-common-js.min.js",
   "files": [
     "dist/*",
     "src/**/*.vue",
