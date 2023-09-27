@@ -49,7 +49,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/k-form-js.esm.js',
+      file: 'dist/botyglot-common-js.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -73,9 +73,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/k-form-js.ssr.js',
+      file: 'dist/botyglot-common-js.ssr.js',
       format: 'cjs',
-      name: 'KForm',
+      name: 'BotyglotCommonJs',
       exports: 'named',
       globals,
     },
@@ -100,9 +100,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/k-form-js.min.js',
+      file: 'dist/botyglot-common-js.min.js',
       format: 'iife',
-      name: 'KForm',
+      name: 'BotyglotCommonJs',
       exports: 'named',
       globals,
     },

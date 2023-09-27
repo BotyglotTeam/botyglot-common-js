@@ -5,23 +5,23 @@ This package has been initiated using https://github.com/team-innovation/vue-sfc
 
 Enhanced form components, inspired by formik, designed to work with server generated forms by Ruby on Rails
 
-Should be used in pair with [k-form-rb](https://github.com/kundigo/k-form-rb)
+Should be used in pair with [botyglot-common-ruby](https://github.com/BotyglotTeam/botyglot-common-ruby)
 
 # Install the package
 
-This package belongs to Kundigo and it's supposed to remain private and to be used in kundigo's projects. Add this package to `package.json` file
+This package belongs to Botyglot and it's supposed to remain private and to be used in Botyglot's projects. Add this package to `package.json` file
 
 ```js
-"k-form-js": "git+https://github.com/kundigo/k-form-js.git#master",
+"botyglot-common-js": "git+https://github.com/BotyglotTeam/botyglot-common-js.git#master",
 ```
 
 Then import the components you need in your Rails App.
 
 ```js
 // in general you should only require to import FormStore
-import { FormStore} from 'k-form-js'
+import { FormStore } from 'botyglot-common-js'
 // if needed, you can import the other components 
-import { CheckBox, Date, Datetime, Field, Form, Select, Textarea} from 'k-form-js'
+import { CheckBox, Date, Datetime, Field, Form, Select, Textarea} from 'botyglot-common-js'
 ```
 
 ## Making it work in your rails application using a stimulus controller
@@ -30,7 +30,7 @@ import { CheckBox, Date, Datetime, Field, Form, Select, Textarea} from 'k-form-j
 ```js
 // file : app/javascript/controllers/vuejs_forms_controller.js
 import { Controller } from "stimulus"
-import { FormStore } from 'k-form-js'
+import { FormStore } from 'botyglot-common-js'
 
 // OPTIONAL: import a custom vuex plugin that allows adding additional behaviour
 // import plugin from 'path/to/plugin'
@@ -88,7 +88,7 @@ Updating the package:
 
 Get the updates in your Rails app
 
-* Run :  `yarn upgrade k-form`
+* Run :  `yarn upgrade botyglot-common-js`
 * Note : You can use another branch in you app, by replacing `master` with the name of the branch in the rails apps `package.json` 
 
 # Testing
