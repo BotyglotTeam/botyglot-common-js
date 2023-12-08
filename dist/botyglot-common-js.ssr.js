@@ -2406,12 +2406,12 @@ var script$f = {
     this.$nextTick(function () {
       // go to the library folder and use the utils file from the library
       // to display the phone number format placeholder
-      var intlTelInputUtils = require("intl-tel-input/build/js/utils");
       intlTelInput(this.$refs.telInput, {
         preferredCountries: [],
         formatOnDisplay: false,
         separateDialCode: false,
-        utilsScript: intlTelInputUtils
+        // fixme: should be the path to intl-tel-input/build/js/utils but I dont know how to get it while using vite js
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.21/build/js/utils.js"
       });
       //let iti = window.intlTelInputGlobals.getInstance(this.$refs.telInput)
       //this.$refs.telInput.value = iti.getNumber();
@@ -2429,7 +2429,7 @@ var __vue_staticRenderFns__$f = [];
   /* scoped */
   var __vue_scope_id__$f = undefined;
   /* module identifier */
-  var __vue_module_identifier__$f = "data-v-25c5f69d";
+  var __vue_module_identifier__$f = "data-v-cca5a5da";
   /* functional template */
   var __vue_is_functional_template__$f = false;
   /* style inject */
