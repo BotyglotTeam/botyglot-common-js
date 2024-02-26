@@ -1736,11 +1736,6 @@ var script$a = {
       require: false,
       default: true
     },
-    placeholder: {
-      type: String,
-      require: false,
-      default: ""
-    }
   },
   computed: {
     choicesToJson: function() {
@@ -1769,12 +1764,29 @@ var script$a = {
       return this.$store.getters.getSuggestedValues(this.$props.name)
     },
     includeBlank: function(){
-      return (this.$props.include_blank === 'true')
+      var include_blank = this.$props.include_blank;
+
+      if (include_blank === null ||
+          include_blank === "" ||
+          include_blank === false ||
+          include_blank === "false") {
+        return false;
+      }
+      return true;
+    },
+    placeholder: function(){
+      var include_blank = this.$props.include_blank;
+
+      if (include_blank === true || include_blank === "true") {
+        return "";
+      }
+      return include_blank;
     },
     inputClass: function() {
       return {
         //"input-block__field": true,
         "custom-select": true,
+        "input-block__placeholder--selected": (this.includeBlank && this.inputValue === ''),
         "input-block__field--invalid": (this.inputTouched && this.inputError),
         "input-block__field--warning": (this.inputTouched && !this.inputError && this.inputWarning)
       }
@@ -1814,11 +1826,7 @@ var script$a = {
     },
     inputValue: {
       get: function get () {
-        if (this.$store.getters.getValue(this.$props.name) === null && this.$props.placeholder && this.$props.placeholder !== "") {
-          return this.$props.placeholder
-        }
-
-        return this.$store.getters.getValue(this.$props.name)
+        return (this.$store.getters.getValue(this.$props.name) || '')  // '' forces the Placeholder  (aka the option with value='') to be displayed and selected.
       },
       set: function set (value) {
         this.$store.dispatch('update', {
@@ -1841,7 +1849,7 @@ var script$a = {
 var __vue_script__$a = script$a;
 
 /* template */
-var __vue_render__$a = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.inputGroupClass,attrs:{"id":_vm.id + '__wrapper'}},[_vm._ssrNode(((_vm.readonly)?("<input type=\"hidden\""+(_vm._ssrAttr("name",_vm.name))+(_vm._ssrAttr("value",_vm.inputValue))+">"):"<!---->")+" "+((_vm.prepend)?("<div"+(_vm._ssrAttr("id",_vm.id + '__prepend'))+" class=\"input-block__prepend\"><span>"+(_vm._s(_vm.prepend))+"</span></div>"):"<!---->")+" "),_c('select',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"disabled":_vm.readonly},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.inputValue=$event.target.multiple ? $$selectedVal : $$selectedVal[0];}}},'select',this.$attrs,false),[(_vm.includeBlank)?_c('option',[_vm._v(_vm._s(_vm.placeholder))]):_vm._e(),_vm._v(" "),_vm._l((_vm.choicesToJson),function(value,key){return _c('option',{key:key,domProps:{"value":value.id}},[_vm._v("\n      "+_vm._s(value.display_name)+"\n    ")])})],2),_vm._ssrNode(" "+((_vm.append)?("<div"+(_vm._ssrAttr("id",_vm.id + '__append'))+" class=\"input-block__append\"><span>"+(_vm._s(_vm.append))+"</span></div>"):"<!---->")+" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],2)};
+var __vue_render__$a = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.inputGroupClass,attrs:{"id":_vm.id + '__wrapper'}},[_vm._ssrNode(((_vm.readonly)?("<input type=\"hidden\""+(_vm._ssrAttr("name",_vm.name))+(_vm._ssrAttr("value",_vm.inputValue))+">"):"<!---->")+" "+((_vm.prepend)?("<div"+(_vm._ssrAttr("id",_vm.id + '__prepend'))+" class=\"input-block__prepend\"><span>"+(_vm._s(_vm.prepend))+"</span></div>"):"<!---->")+" "),_c('select',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"disabled":_vm.readonly},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.inputValue=$event.target.multiple ? $$selectedVal : $$selectedVal[0];}}},'select',this.$attrs,false),[(_vm.includeBlank)?_c('option',{attrs:{"value":""}},[_vm._v(_vm._s(_vm.placeholder))]):_vm._e(),_vm._v(" "),_vm._l((_vm.choicesToJson),function(value,key){return _c('option',{key:key,domProps:{"value":value.id}},[_vm._v("\n      "+_vm._s(value.display_name)+"\n    ")])})],2),_vm._ssrNode(" "+((_vm.append)?("<div"+(_vm._ssrAttr("id",_vm.id + '__append'))+" class=\"input-block__append\"><span>"+(_vm._s(_vm.append))+"</span></div>"):"<!---->")+" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],2)};
 var __vue_staticRenderFns__$a = [];
 
   /* style */
@@ -1849,7 +1857,7 @@ var __vue_staticRenderFns__$a = [];
   /* scoped */
   var __vue_scope_id__$a = undefined;
   /* module identifier */
-  var __vue_module_identifier__$a = "data-v-06b979c2";
+  var __vue_module_identifier__$a = "data-v-ab95bfb8";
   /* functional template */
   var __vue_is_functional_template__$a = false;
   /* style inject */
