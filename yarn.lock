@@ -1683,9 +1683,10 @@ vue-flatpickr-component@^8:
   dependencies:
     flatpickr "^4.6.6"
 
-"vue-monaco@git+https://github.com/swimmio/vue-monaco.git#no-require-in-esm":
-  version "0.3.1"
-  resolved "git+https://github.com/swimmio/vue-monaco.git#116043a545c2618a88646ca48dc2d75ae5811522"
+vue-monaco@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/vue-monaco/-/vue-monaco-1.2.2.tgz#5e88bd25bf013a32d8fb051acab7bc186c3753e4"
+  integrity sha512-+BhCHeAuDmjtCUP9MUxan6OjGgOqDR7xHlNScZ8Cfq32iac76Fv7z6RfC+lSrp0YpCjEPl6bvpY21N11UBRmMg==
   dependencies:
     monaco-editor "^0.20.0"
     nano-assign "^1.0.0"
