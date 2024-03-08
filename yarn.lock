@@ -1683,10 +1683,9 @@ vue-flatpickr-component@^8:
   dependencies:
     flatpickr "^4.6.6"
 
-vue-monaco@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/vue-monaco/-/vue-monaco-1.2.2.tgz#5e88bd25bf013a32d8fb051acab7bc186c3753e4"
-  integrity sha512-+BhCHeAuDmjtCUP9MUxan6OjGgOqDR7xHlNScZ8Cfq32iac76Fv7z6RfC+lSrp0YpCjEPl6bvpY21N11UBRmMg==
+"vue-monaco@https://github.com/BotyglotTeam/vue-monaco":
+  version "0.3.1"
+  resolved "https://github.com/BotyglotTeam/vue-monaco#b07d56ef651d293d14fe81a86377178fd4fd379c"
   dependencies:
     monaco-editor "^0.20.0"
     nano-assign "^1.0.0"

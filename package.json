@@ -36,7 +36,7 @@
     "ramda": "^0.26.1",
     "vue": "^2.6.14",
     "vue-flatpickr-component": "^8",
-    "vue-monaco": "^1.2.2",
+    "vue-monaco": "https://github.com/BotyglotTeam/vue-monaco",
     "vue-select": "^3.13.3",
     "vue-template-compiler": "^2.6.14",
     "vue2-editor": "^2.10.3",
