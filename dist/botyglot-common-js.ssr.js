@@ -1765,7 +1765,7 @@ var __vue_staticRenderFns__$a = [];
   );//
 
 var script$b = {
-  components: { ErrorsPlaceholder: __vue_component__, ComponentWrapper: __vue_component__$a },
+  components: { ErrorsPlaceholder: __vue_component__ },
   inheritAttrs: false,
   props: {
     append: {
@@ -1926,7 +1926,7 @@ var __vue_staticRenderFns__$b = [];
   /* scoped */
   var __vue_scope_id__$b = undefined;
   /* module identifier */
-  var __vue_module_identifier__$b = "data-v-aeae3690";
+  var __vue_module_identifier__$b = "data-v-3783a8ce";
   /* functional template */
   var __vue_is_functional_template__$b = false;
   /* style inject */
