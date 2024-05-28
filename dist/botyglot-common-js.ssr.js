@@ -1719,6 +1719,7 @@ var script$a = {
   computed: {
     getValueFromStore: function getValueFromStore () {
       var value = this.$store.getters.getValue(this.$props.name);
+      console.log("azaza", value);
       return value !== undefined && value !== null && value !== '';
     },
     inputGroupClass: function inputGroupClass () {
@@ -1740,7 +1741,7 @@ var __vue_staticRenderFns__$a = [];
   /* scoped */
   var __vue_scope_id__$a = undefined;
   /* module identifier */
-  var __vue_module_identifier__$a = "data-v-02f7b290";
+  var __vue_module_identifier__$a = "data-v-488414d4";
   /* functional template */
   var __vue_is_functional_template__$a = false;
   /* style inject */
@@ -2937,6 +2938,7 @@ var FormStore = function FormStore(ref) {
     'botyglot-datetime': __vue_component__$4,
     'botyglot-input': __vue_component__$5,
     'botyglot-form': __vue_component__$6,
+    'botyglot-component-wrapper': __vue_component__$a,
     'botyglot-hidden': __vue_component__$7,
     'botyglot-select': __vue_component__$b,
     'botyglot-monaco_editor': __vue_component__$8,
@@ -2948,7 +2950,6 @@ var FormStore = function FormStore(ref) {
     'botyglot-tel-input': __vue_component__$g,
     'botyglot-multi-check': __vue_component__$i,
     'botyglot-errors-placeholder': __vue_component__,
-    'botyglot-component-wrapper': __vue_component__$a
   };
 
   var modelName = Object.keys(values)[0];
