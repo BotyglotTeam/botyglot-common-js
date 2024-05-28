@@ -246,15 +246,14 @@ var script$1 = {
     }
   },
   computed: {
-    getValueFromStore: function getValueFromStore () {
+    isEmpty: function isEmpty () {
       var value = this.$store.getters.getValue(this.$props.name);
-      console.log("azaza", value);
-      return value !== undefined && value !== null && value !== '';
+      return value === undefined || value === null || value === '';
     },
     inputGroupClass: function inputGroupClass () {
       return {
-        "botyglot-form--class-when-not-empty": this.getValueFromStore,
-        "botyglot-form--class-when-empty": !this.getValueFromStore
+        "botyglot-form--class-when-not-empty": !this.isEmpty,
+        "botyglot-form--class-when-empty": this.isEmpty
       }
     },
   },
@@ -270,7 +269,7 @@ var __vue_staticRenderFns__$1 = [];
   /* scoped */
   var __vue_scope_id__$1 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$1 = "data-v-488414d4";
+  var __vue_module_identifier__$1 = "data-v-dd141bde";
   /* functional template */
   var __vue_is_functional_template__$1 = false;
   /* style inject */
@@ -2954,7 +2953,6 @@ var FormStore = function FormStore(ref) {
     'botyglot-datetime': __vue_component__$5,
     'botyglot-input': __vue_component__$6,
     'botyglot-form': __vue_component__$7,
-    'botyglot-component-wrapper': __vue_component__$1,
     'botyglot-hidden': __vue_component__$8,
     'botyglot-select': __vue_component__$b,
     'botyglot-monaco_editor': __vue_component__$9,
