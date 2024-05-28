@@ -1700,18 +1700,18 @@ var script$a = {
   inheritAttrs: false,
   props: {
     append: {
-      type:String,
+      type: String,
     },
-    name:{
-      type:String,
-      require:true
+    name: {
+      type: String,
+      require: true
     },
-    id:{
-      type:String,
-      require:true
+    id: {
+      type: String,
+      require: true
     },
     prepend: {
-      type:String,
+      type: String,
     },
     choices: {
       type: String,
@@ -1738,32 +1738,32 @@ var script$a = {
     },
   },
   computed: {
-    choicesToJson: function() {
+    choicesToJson: function () {
       return (
           this.$store.getters.getPotentialValues(this.$props.name) ||
           JSON.parse(this.$props.choices)
       )
 
     },
-    displayValidationError: function(){
+    displayValidationError: function () {
       return this.inputTouched && this.inputError
     },
-    displayValidationWarning: function(){
+    displayValidationWarning: function () {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
-    suggestValue: function(){
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true )
+    suggestValue: function () {
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
     },
-    displayError: function(){
-      return (this.$props.display_error === 'true' || this.$props.display_error === true )
+    displayError: function () {
+      return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
-    useSuggestedValue: function() {
+    useSuggestedValue: function () {
       return this.suggestValue && !this.inputTouched
     },
-    suggestedValue: function(){
+    suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
     },
-    includeBlank: function(){
+    includeBlank: function () {
       var include_blank = this.$props.include_blank;
 
       if (include_blank === null ||
@@ -1774,7 +1774,7 @@ var script$a = {
       }
       return true;
     },
-    placeholder: function(){
+    placeholder: function () {
       var include_blank = this.$props.include_blank;
 
       if (include_blank === true || include_blank === "true") {
@@ -1782,7 +1782,7 @@ var script$a = {
       }
       return include_blank;
     },
-    inputClass: function() {
+    inputClass: function () {
       return {
         //"input-block__field": true,
         "custom-select": true,
@@ -1792,21 +1792,21 @@ var script$a = {
       }
     },
 
-    inputError: function() {
+    inputError: function () {
       if (this.inputTouched) {
         return this.$store.getters.getError(this.$props.name)
       } else {
         return null
       }
     },
-    inputWarning: function() {
+    inputWarning: function () {
       if (this.inputTouched) {
         return this.$store.getters.getWarning(this.$props.name)
       } else {
         return null
       }
     },
-    inputGroupClass: function() {
+    inputGroupClass: function () {
       return {
         "input-block": true,
       }
@@ -1839,7 +1839,7 @@ var script$a = {
 
   },
   watch: {
-    suggestedValue: function(value, _oldValue) {
+    suggestedValue: function (value, _oldValue) {
       if (this.useSuggestedValue) {
         this.inputValue = value;
       }
@@ -1849,7 +1849,7 @@ var script$a = {
 var __vue_script__$a = script$a;
 
 /* template */
-var __vue_render__$a = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.inputGroupClass,attrs:{"id":_vm.id + '__wrapper'}},[_vm._ssrNode(((_vm.readonly)?("<input type=\"hidden\""+(_vm._ssrAttr("name",_vm.name))+(_vm._ssrAttr("value",_vm.inputValue))+">"):"<!---->")+" "+((_vm.prepend)?("<div"+(_vm._ssrAttr("id",_vm.id + '__prepend'))+" class=\"input-block__prepend\"><span>"+(_vm._s(_vm.prepend))+"</span></div>"):"<!---->")+" "),_c('select',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"disabled":_vm.readonly},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.inputValue=$event.target.multiple ? $$selectedVal : $$selectedVal[0];}}},'select',this.$attrs,false),[(_vm.includeBlank)?_c('option',{attrs:{"value":""}},[_vm._v(_vm._s(_vm.placeholder))]):_vm._e(),_vm._v(" "),_vm._l((_vm.choicesToJson),function(value,key){return _c('option',{key:key,domProps:{"value":value.id}},[_vm._v("\n      "+_vm._s(value.display_name)+"\n    ")])})],2),_vm._ssrNode(" "+((_vm.append)?("<div"+(_vm._ssrAttr("id",_vm.id + '__append'))+" class=\"input-block__append\"><span>"+(_vm._s(_vm.append))+"</span></div>"):"<!---->")+" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],2)};
+var __vue_render__$a = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[(_vm.readonly)?_c('input',{attrs:{"type":"hidden","name":_vm.name},domProps:{"value":_vm.inputValue}}):_vm._e(),_vm._v(" "),(_vm.prepend)?_c('div',{staticClass:"input-block__prepend",attrs:{"id":_vm.id + '__prepend'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.prepend)}})]):_vm._e(),_vm._v(" "),_c('select',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"disabled":_vm.readonly},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.inputValue=$event.target.multiple ? $$selectedVal : $$selectedVal[0];}}},'select',this.$attrs,false),[(_vm.includeBlank)?_c('option',{attrs:{"value":""}},[_vm._v(_vm._s(_vm.placeholder))]):_vm._e(),_vm._v(" "),_vm._l((_vm.choicesToJson),function(value,key){return _c('option',{key:key,domProps:{"value":value.id}},[_vm._v("\n      "+_vm._s(value.display_name)+"\n    ")])})],2),_vm._v(" "),(_vm.append)?_c('div',{staticClass:"input-block__append",attrs:{"id":_vm.id + '__append'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.append)}})]):_vm._e(),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
 var __vue_staticRenderFns__$a = [];
 
   /* style */
@@ -1857,7 +1857,7 @@ var __vue_staticRenderFns__$a = [];
   /* scoped */
   var __vue_scope_id__$a = undefined;
   /* module identifier */
-  var __vue_module_identifier__$a = "data-v-ab95bfb8";
+  var __vue_module_identifier__$a = "data-v-3783a8ce";
   /* functional template */
   var __vue_is_functional_template__$a = false;
   /* style inject */
