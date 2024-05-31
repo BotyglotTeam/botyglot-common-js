@@ -626,6 +626,10 @@ var script$4 = {
     append: {
       type: String,
     },
+    clear_option: {
+      type: [String, Boolean],
+      require: true,
+    },
     name: {
       type: String,
       require: true,
@@ -662,6 +666,9 @@ var script$4 = {
     },
     suggestValue: function () {
       return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+    },
+    clearOption: function () {
+      return (this.$props.clear_option === 'true' || this.$props.clear_option === true)
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
@@ -747,6 +754,12 @@ var script$4 = {
     },
   },
   methods: {
+    clearDate: function clearDate () {
+      this.$store.dispatch("update", {
+        value: '',
+        name: this.$props.name,
+      });
+    },
     onFocusDatePicker: function () {
       this.inputTouched = true;
     },
@@ -794,7 +807,7 @@ var __vue_script__$4 = script$4;
 var __vue_render__$4 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[(_vm.prepend)?_c('div',{staticClass:"input-block__prepend",attrs:{"id":_vm.id + '__prepend'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.prepend)}})]):_vm._e(),_vm._v(" "),_c('input',{attrs:{"type":"hidden","name":_vm.name},domProps:{"value":_vm.inputValue}}),_vm._v(" "),_c('flat-pickr',_vm._b({ref:"input",class:[
       _vm.inputClass,
       _vm.prepend ? 'input--has-prepend' : '',
-      _vm.append ? 'input--has-append' : '' ],attrs:{"id":_vm.id,"config":_vm.config},on:{"on-open":_vm.onFocusDatePicker},model:{value:(_vm.inputFormattedValue),callback:function ($$v) {_vm.inputFormattedValue=$$v;},expression:"inputFormattedValue"}},'flat-pickr',this.$attrs,false)),_vm._v(" "),(_vm.append)?_c('div',{staticClass:"input-block__append",attrs:{"id":_vm.id + '__append'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.append)}})]):_vm._e(),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
+      _vm.append ? 'input--has-append' : '' ],attrs:{"id":_vm.id,"config":_vm.config},on:{"on-open":_vm.onFocusDatePicker},model:{value:(_vm.inputFormattedValue),callback:function ($$v) {_vm.inputFormattedValue=$$v;},expression:"inputFormattedValue"}},'flat-pickr',this.$attrs,false)),_vm._v(" "),(_vm.clearOption)?_c('div',{staticClass:"botyglot--date-component-append-actions"},[_c('button',{staticClass:"botyglot--date-component--clear-value",attrs:{"type":"button","title":"Clear","data-clear":""},on:{"click":_vm.clearDate}},[_c('svg',{attrs:{"xmlns":"http://www.w3.org/2000/svg","height":"1.3rem","width":"1.3rem","fill":"none","viewBox":"0 0 24 24","stroke-width":"2","stroke":"currentColor"}},[_c('path',{attrs:{"stroke-linecap":"round","stroke-linejoin":"round","d":"M6 18 18 6M6 6l12 12"}})]),_vm._v(" "),_c('span',{staticClass:"sr-only",attrs:{"aria-hidden":"true"}},[_vm._v("Clear")])])]):_vm._e(),_vm._v(" "),(_vm.append)?_c('div',{staticClass:"input-block__append",attrs:{"id":_vm.id + '__append'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.append)}})]):_vm._e(),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
 var __vue_staticRenderFns__$4 = [];
 
   /* style */
@@ -802,7 +815,7 @@ var __vue_staticRenderFns__$4 = [];
   /* scoped */
   var __vue_scope_id__$4 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$4 = "data-v-b4e123f0";
+  var __vue_module_identifier__$4 = "data-v-97670226";
   /* functional template */
   var __vue_is_functional_template__$4 = false;
   /* style inject */
