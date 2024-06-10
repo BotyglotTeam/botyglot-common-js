@@ -2935,6 +2935,63 @@ var __vue_staticRenderFns__$i = [];
     undefined,
     undefined,
     undefined
+  );var this$1 = undefined;
+//
+//
+//
+//
+//
+
+var script$j = {
+  inheritAttrs: false,
+  props: {
+    name: {
+      type: String,
+      require: true
+    },
+  },
+  computed: {
+    getSuggestedValue: function () {
+      return this$1.$store.getters.getSuggestedValues(this$1.$props.name)
+    },
+    displaySuggestedValue: function () {
+      return this$1.getSuggestedValue !== null
+    }
+  },
+};/* script */
+var __vue_script__$j = script$j;
+
+/* template */
+var __vue_render__$j = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.displaySuggestedValue)?_c('span',[_vm._ssrNode(_vm._ssrEscape(" "+_vm._s(_vm.getSuggestedValue)+"  "))]):_vm._e()};
+var __vue_staticRenderFns__$j = [];
+
+  /* style */
+  var __vue_inject_styles__$j = undefined;
+  /* scoped */
+  var __vue_scope_id__$j = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$j = "data-v-f1390d20";
+  /* functional template */
+  var __vue_is_functional_template__$j = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$j = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$j },
+    __vue_inject_styles__$j,
+    __vue_script__$j,
+    __vue_scope_id__$j,
+    __vue_is_functional_template__$j,
+    __vue_module_identifier__$j,
+    false,
+    undefined,
+    undefined,
+    undefined
   );// start here the update
 function objectWithoutProperties (obj, exclude) { var target = {}; for (var k in obj) if (Object.prototype.hasOwnProperty.call(obj, k) && exclude.indexOf(k) === -1) target[k] = obj[k]; return target; }
 
@@ -2977,6 +3034,7 @@ var FormStore = function FormStore(ref) {
     'botyglot-tel-input': __vue_component__$g,
     'botyglot-multi-check': __vue_component__$i,
     'botyglot-errors-placeholder': __vue_component__,
+    'botyglot-suggested-value': __vue_component__$j,
   };
 
   var modelName = Object.keys(values)[0];
@@ -3205,7 +3263,7 @@ var FormStore = function FormStore(ref) {
     components: Object.assign(defaultComponents, additionalComponents),
     props: {},
   });
-};/* eslint-disable import/prefer-default-export */var components=/*#__PURE__*/Object.freeze({__proto__:null,Autocomplete: __vue_component__$2,CheckBox: __vue_component__$3,Date: __vue_component__$4,Datetime: __vue_component__$5,Field: __vue_component__$6,Form: __vue_component__$7,Hidden: __vue_component__$8,MonacoEditor: __vue_component__$9,QuillEditor: __vue_component__$a,Select: __vue_component__$b,Submit: __vue_component__$c,Textarea: __vue_component__$d,FormStore: FormStore,Label: __vue_component__$e,ToggleSwitch: __vue_component__$f,TelInput: __vue_component__$g,Time: __vue_component__$h,MultiCheck: __vue_component__$i,ErrorsPlaceholder: __vue_component__,ComponentWrapper: __vue_component__$1});// Import vue components
+};/* eslint-disable import/prefer-default-export */var components=/*#__PURE__*/Object.freeze({__proto__:null,Autocomplete: __vue_component__$2,CheckBox: __vue_component__$3,Date: __vue_component__$4,Datetime: __vue_component__$5,Field: __vue_component__$6,Form: __vue_component__$7,Hidden: __vue_component__$8,MonacoEditor: __vue_component__$9,QuillEditor: __vue_component__$a,Select: __vue_component__$b,Submit: __vue_component__$c,Textarea: __vue_component__$d,FormStore: FormStore,Label: __vue_component__$e,ToggleSwitch: __vue_component__$f,TelInput: __vue_component__$g,Time: __vue_component__$h,MultiCheck: __vue_component__$i,ErrorsPlaceholder: __vue_component__,SuggestedValue: __vue_component__$j,ComponentWrapper: __vue_component__$1});// Import vue components
 
 // install function executed by Vue.use()
 function install(Vue) {
@@ -3231,4 +3289,4 @@ if (typeof window !== 'undefined') {
 }
 if (GlobalVue) {
   GlobalVue.use(plugin);
-}exports.Autocomplete=__vue_component__$2;exports.CheckBox=__vue_component__$3;exports.ComponentWrapper=__vue_component__$1;exports.Date=__vue_component__$4;exports.Datetime=__vue_component__$5;exports.ErrorsPlaceholder=__vue_component__;exports.Field=__vue_component__$6;exports.Form=__vue_component__$7;exports.FormStore=FormStore;exports.Hidden=__vue_component__$8;exports.Label=__vue_component__$e;exports.MonacoEditor=__vue_component__$9;exports.MultiCheck=__vue_component__$i;exports.QuillEditor=__vue_component__$a;exports.Select=__vue_component__$b;exports.Submit=__vue_component__$c;exports.TelInput=__vue_component__$g;exports.Textarea=__vue_component__$d;exports.Time=__vue_component__$h;exports.ToggleSwitch=__vue_component__$f;exports.default=plugin;
+}exports.Autocomplete=__vue_component__$2;exports.CheckBox=__vue_component__$3;exports.ComponentWrapper=__vue_component__$1;exports.Date=__vue_component__$4;exports.Datetime=__vue_component__$5;exports.ErrorsPlaceholder=__vue_component__;exports.Field=__vue_component__$6;exports.Form=__vue_component__$7;exports.FormStore=FormStore;exports.Hidden=__vue_component__$8;exports.Label=__vue_component__$e;exports.MonacoEditor=__vue_component__$9;exports.MultiCheck=__vue_component__$i;exports.QuillEditor=__vue_component__$a;exports.Select=__vue_component__$b;exports.Submit=__vue_component__$c;exports.SuggestedValue=__vue_component__$j;exports.TelInput=__vue_component__$g;exports.Textarea=__vue_component__$d;exports.Time=__vue_component__$h;exports.ToggleSwitch=__vue_component__$f;exports.default=plugin;
