@@ -2962,7 +2962,7 @@ var script$j = {
 var __vue_script__$j = script$j;
 
 /* template */
-var __vue_render__$j = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.displaySuggestedValue)?_c('span',[_vm._ssrNode(_vm._ssrEscape(" "+_vm._s(_vm.getSuggestedValue)+"  "))]):_vm._e()};
+var __vue_render__$j = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.displaySuggestedValue)?_c('span',_vm._b({},'span',this.$attrs,false),[_vm._ssrNode(_vm._ssrEscape(_vm._s(_vm.getSuggestedValue)))]):_vm._e()};
 var __vue_staticRenderFns__$j = [];
 
   /* style */
@@ -2970,7 +2970,7 @@ var __vue_staticRenderFns__$j = [];
   /* scoped */
   var __vue_scope_id__$j = undefined;
   /* module identifier */
-  var __vue_module_identifier__$j = "data-v-f1390d20";
+  var __vue_module_identifier__$j = "data-v-1b8efc41";
   /* functional template */
   var __vue_is_functional_template__$j = false;
   /* style inject */
