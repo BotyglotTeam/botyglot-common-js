@@ -2951,7 +2951,8 @@ var script$j = {
   },
   computed: {
     getSuggestedValue: function getSuggestedValue () {
-      return this.$store.getters.getSuggestedValues(this.$props.name)
+      var modelName = this.$store.getters.getMeta("modelName");
+      return this.$store.getters.getSuggestedValues((modelName + "." + (this.$props.name)))
     },
     displaySuggestedValue: function displaySuggestedValue () {
       return this.getSuggestedValue !== null
@@ -2969,7 +2970,7 @@ var __vue_staticRenderFns__$j = [];
   /* scoped */
   var __vue_scope_id__$j = undefined;
   /* module identifier */
-  var __vue_module_identifier__$j = "data-v-a238dee2";
+  var __vue_module_identifier__$j = "data-v-764b578c";
   /* functional template */
   var __vue_is_functional_template__$j = false;
   /* style inject */
