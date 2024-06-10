@@ -2935,8 +2935,7 @@ var __vue_staticRenderFns__$i = [];
     undefined,
     undefined,
     undefined
-  );var this$1 = undefined;
-//
+  );//
 //
 //
 //
@@ -2951,11 +2950,11 @@ var script$j = {
     },
   },
   computed: {
-    getSuggestedValue: function () {
-      return this$1.$store.getters.getSuggestedValues(this$1.$props.name)
+    getSuggestedValue: function getSuggestedValue () {
+      return this.$store.getters.getSuggestedValues(this.$props.name)
     },
-    displaySuggestedValue: function () {
-      return this$1.getSuggestedValue !== null
+    displaySuggestedValue: function displaySuggestedValue () {
+      return this.getSuggestedValue !== null
     }
   },
 };/* script */
@@ -2970,7 +2969,7 @@ var __vue_staticRenderFns__$j = [];
   /* scoped */
   var __vue_scope_id__$j = undefined;
   /* module identifier */
-  var __vue_module_identifier__$j = "data-v-1b8efc41";
+  var __vue_module_identifier__$j = "data-v-a238dee2";
   /* functional template */
   var __vue_is_functional_template__$j = false;
   /* style inject */
