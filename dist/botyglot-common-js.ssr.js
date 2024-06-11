@@ -1118,13 +1118,13 @@ var script$6 = {
   },
   computed: {
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -1203,7 +1203,7 @@ var __vue_staticRenderFns__$6 = [];
   /* scoped */
   var __vue_scope_id__$6 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$6 = "data-v-4cfd95f4";
+  var __vue_module_identifier__$6 = "data-v-79b10f76";
   /* functional template */
   var __vue_is_functional_template__$6 = false;
   /* style inject */
