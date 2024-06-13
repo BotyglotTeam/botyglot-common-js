@@ -350,13 +350,13 @@ var script$2 = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -443,7 +443,7 @@ var __vue_staticRenderFns__$2 = [];
   /* scoped */
   var __vue_scope_id__$2 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$2 = "data-v-62e6a218";
+  var __vue_module_identifier__$2 = "data-v-30d77eb2";
   /* functional template */
   var __vue_is_functional_template__$2 = false;
   /* style inject */
@@ -505,13 +505,13 @@ var script$3 = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function(){
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true )
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function(){
       return (this.$props.display_error === 'true' || this.$props.display_error === true )
     },
     useSuggestedValue: function() {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function(){
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -582,7 +582,7 @@ var __vue_staticRenderFns__$3 = [];
   /* scoped */
   var __vue_scope_id__$3 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$3 = "data-v-c0b31cea";
+  var __vue_module_identifier__$3 = "data-v-28c82496";
   /* functional template */
   var __vue_is_functional_template__$3 = false;
   /* style inject */
@@ -665,7 +665,7 @@ var script$4 = {
       return this.inputTouched && !this.inputError && this.inputWarning;
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     clearOption: function () {
       return (this.$props.clear_option === 'true' || this.$props.clear_option === true)
@@ -674,7 +674,7 @@ var script$4 = {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched;
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name);
@@ -815,7 +815,7 @@ var __vue_staticRenderFns__$4 = [];
   /* scoped */
   var __vue_scope_id__$4 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$4 = "data-v-97670226";
+  var __vue_module_identifier__$4 = "data-v-1616b08e";
   /* functional template */
   var __vue_is_functional_template__$4 = false;
   /* style inject */
@@ -902,13 +902,13 @@ var script$5 = {
       return this.inputTouched && !this.inputError && this.inputWarning;
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched;
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name);
@@ -1063,7 +1063,7 @@ var __vue_staticRenderFns__$5 = [];
   /* scoped */
   var __vue_scope_id__$5 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$5 = "data-v-25116bb1";
+  var __vue_module_identifier__$5 = "data-v-b96a9e8a";
   /* functional template */
   var __vue_is_functional_template__$5 = false;
   /* style inject */
@@ -1118,13 +1118,13 @@ var script$6 = {
   },
   computed: {
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -1203,7 +1203,7 @@ var __vue_staticRenderFns__$6 = [];
   /* scoped */
   var __vue_scope_id__$6 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$6 = "data-v-4cfd95f4";
+  var __vue_module_identifier__$6 = "data-v-79b10f76";
   /* functional template */
   var __vue_is_functional_template__$6 = false;
   /* style inject */
@@ -1491,13 +1491,13 @@ var script$9 = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === "force")
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -1604,7 +1604,7 @@ var __vue_staticRenderFns__$9 = [];
   /* scoped */
   var __vue_scope_id__$9 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$9 = "data-v-698b2c89";
+  var __vue_module_identifier__$9 = "data-v-07fad558";
   /* functional template */
   var __vue_is_functional_template__$9 = false;
   /* style inject */
@@ -1669,13 +1669,13 @@ var script$a = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -1757,7 +1757,7 @@ var __vue_staticRenderFns__$a = [];
   /* scoped */
   var __vue_scope_id__$a = undefined;
   /* module identifier */
-  var __vue_module_identifier__$a = "data-v-2f5c5117";
+  var __vue_module_identifier__$a = "data-v-f24ade44";
   /* functional template */
   var __vue_is_functional_template__$a = false;
   /* style inject */
@@ -1838,13 +1838,13 @@ var script$b = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -1943,7 +1943,7 @@ var __vue_staticRenderFns__$b = [];
   /* scoped */
   var __vue_scope_id__$b = undefined;
   /* module identifier */
-  var __vue_module_identifier__$b = "data-v-aeae3690";
+  var __vue_module_identifier__$b = "data-v-09845682";
   /* functional template */
   var __vue_is_functional_template__$b = false;
   /* style inject */
@@ -2098,13 +2098,13 @@ var script$d = {
       return this.inputTouched && !this.inputError && this.inputWarning
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name)
@@ -2183,7 +2183,7 @@ var __vue_staticRenderFns__$d = [];
   /* scoped */
   var __vue_scope_id__$d = undefined;
   /* module identifier */
-  var __vue_module_identifier__$d = "data-v-a9151902";
+  var __vue_module_identifier__$d = "data-v-8396dad0";
   /* functional template */
   var __vue_is_functional_template__$d = false;
   /* style inject */
@@ -2318,13 +2318,13 @@ var script$f = {
       return this.inputTouched && this.inputError
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     displayValidationWarning: function () {
       return this.inputTouched && !this.inputError && this.inputWarning
@@ -2414,7 +2414,7 @@ var __vue_staticRenderFns__$f = [];
   /* scoped */
   var __vue_scope_id__$f = undefined;
   /* module identifier */
-  var __vue_module_identifier__$f = "data-v-ec6b2986";
+  var __vue_module_identifier__$f = "data-v-1a3c6e44";
   /* functional template */
   var __vue_is_functional_template__$f = false;
   /* style inject */
@@ -2619,13 +2619,13 @@ var script$h = {
       return this.inputTouched && !this.inputError && this.inputWarning;
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched;
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name);
@@ -2759,7 +2759,7 @@ var __vue_staticRenderFns__$h = [];
   /* scoped */
   var __vue_scope_id__$h = undefined;
   /* module identifier */
-  var __vue_module_identifier__$h = "data-v-137fec85";
+  var __vue_module_identifier__$h = "data-v-361c67db";
   /* functional template */
   var __vue_is_functional_template__$h = false;
   /* style inject */
@@ -2829,13 +2829,13 @@ var script$i = {
       return this.inputTouched && !this.inputError && this.inputWarning;
     },
     suggestValue: function () {
-      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true)
+      return (this.$props.suggest_value === 'true' || this.$props.suggest_value === true || this.$props.suggest_value === 'force')
     },
     displayError: function () {
       return (this.$props.display_error === 'true' || this.$props.display_error === true)
     },
     useSuggestedValue: function () {
-      return this.suggestValue && !this.inputTouched;
+      return (this.suggestValue && !this.inputTouched) || this.$props.suggest_value === 'force'
     },
     suggestedValue: function () {
       return this.$store.getters.getSuggestedValues(this.$props.name);
@@ -2913,7 +2913,7 @@ var __vue_staticRenderFns__$i = [];
   /* scoped */
   var __vue_scope_id__$i = undefined;
   /* module identifier */
-  var __vue_module_identifier__$i = "data-v-561446cd";
+  var __vue_module_identifier__$i = "data-v-eacb389a";
   /* functional template */
   var __vue_is_functional_template__$i = false;
   /* style inject */
@@ -2931,6 +2931,62 @@ var __vue_staticRenderFns__$i = [];
     __vue_scope_id__$i,
     __vue_is_functional_template__$i,
     __vue_module_identifier__$i,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );//
+//
+//
+//
+//
+
+var script$j = {
+  inheritAttrs: false,
+  props: {
+    name: {
+      type: String,
+      require: true
+    },
+  },
+  computed: {
+    getSuggestedValue: function getSuggestedValue () {
+      return this.$store.getters.getSuggestedValues(this.$props.name)
+    },
+    displaySuggestedValue: function displaySuggestedValue () {
+      return this.getSuggestedValue !== null
+    }
+  },
+};/* script */
+var __vue_script__$j = script$j;
+
+/* template */
+var __vue_render__$j = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.displaySuggestedValue)?_c('span',_vm._b({},'span',this.$attrs,false),[_vm._ssrNode(_vm._ssrEscape(_vm._s(_vm.getSuggestedValue)))]):_vm._e()};
+var __vue_staticRenderFns__$j = [];
+
+  /* style */
+  var __vue_inject_styles__$j = undefined;
+  /* scoped */
+  var __vue_scope_id__$j = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$j = "data-v-a238dee2";
+  /* functional template */
+  var __vue_is_functional_template__$j = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$j = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$j },
+    __vue_inject_styles__$j,
+    __vue_script__$j,
+    __vue_scope_id__$j,
+    __vue_is_functional_template__$j,
+    __vue_module_identifier__$j,
     false,
     undefined,
     undefined,
@@ -2977,6 +3033,7 @@ var FormStore = function FormStore(ref) {
     'botyglot-tel-input': __vue_component__$g,
     'botyglot-multi-check': __vue_component__$i,
     'botyglot-errors-placeholder': __vue_component__,
+    'botyglot-suggested-value': __vue_component__$j,
   };
 
   var modelName = Object.keys(values)[0];
@@ -3205,7 +3262,7 @@ var FormStore = function FormStore(ref) {
     components: Object.assign(defaultComponents, additionalComponents),
     props: {},
   });
-};/* eslint-disable import/prefer-default-export */var components=/*#__PURE__*/Object.freeze({__proto__:null,Autocomplete: __vue_component__$2,CheckBox: __vue_component__$3,Date: __vue_component__$4,Datetime: __vue_component__$5,Field: __vue_component__$6,Form: __vue_component__$7,Hidden: __vue_component__$8,MonacoEditor: __vue_component__$9,QuillEditor: __vue_component__$a,Select: __vue_component__$b,Submit: __vue_component__$c,Textarea: __vue_component__$d,FormStore: FormStore,Label: __vue_component__$e,ToggleSwitch: __vue_component__$f,TelInput: __vue_component__$g,Time: __vue_component__$h,MultiCheck: __vue_component__$i,ErrorsPlaceholder: __vue_component__,ComponentWrapper: __vue_component__$1});// Import vue components
+};/* eslint-disable import/prefer-default-export */var components=/*#__PURE__*/Object.freeze({__proto__:null,Autocomplete: __vue_component__$2,CheckBox: __vue_component__$3,Date: __vue_component__$4,Datetime: __vue_component__$5,Field: __vue_component__$6,Form: __vue_component__$7,Hidden: __vue_component__$8,MonacoEditor: __vue_component__$9,QuillEditor: __vue_component__$a,Select: __vue_component__$b,Submit: __vue_component__$c,Textarea: __vue_component__$d,FormStore: FormStore,Label: __vue_component__$e,ToggleSwitch: __vue_component__$f,TelInput: __vue_component__$g,Time: __vue_component__$h,MultiCheck: __vue_component__$i,ErrorsPlaceholder: __vue_component__,SuggestedValue: __vue_component__$j,ComponentWrapper: __vue_component__$1});// Import vue components
 
 // install function executed by Vue.use()
 function install(Vue) {
@@ -3231,4 +3288,4 @@ if (typeof window !== 'undefined') {
 }
 if (GlobalVue) {
   GlobalVue.use(plugin);
-}exports.Autocomplete=__vue_component__$2;exports.CheckBox=__vue_component__$3;exports.ComponentWrapper=__vue_component__$1;exports.Date=__vue_component__$4;exports.Datetime=__vue_component__$5;exports.ErrorsPlaceholder=__vue_component__;exports.Field=__vue_component__$6;exports.Form=__vue_component__$7;exports.FormStore=FormStore;exports.Hidden=__vue_component__$8;exports.Label=__vue_component__$e;exports.MonacoEditor=__vue_component__$9;exports.MultiCheck=__vue_component__$i;exports.QuillEditor=__vue_component__$a;exports.Select=__vue_component__$b;exports.Submit=__vue_component__$c;exports.TelInput=__vue_component__$g;exports.Textarea=__vue_component__$d;exports.Time=__vue_component__$h;exports.ToggleSwitch=__vue_component__$f;exports.default=plugin;
+}exports.Autocomplete=__vue_component__$2;exports.CheckBox=__vue_component__$3;exports.ComponentWrapper=__vue_component__$1;exports.Date=__vue_component__$4;exports.Datetime=__vue_component__$5;exports.ErrorsPlaceholder=__vue_component__;exports.Field=__vue_component__$6;exports.Form=__vue_component__$7;exports.FormStore=FormStore;exports.Hidden=__vue_component__$8;exports.Label=__vue_component__$e;exports.MonacoEditor=__vue_component__$9;exports.MultiCheck=__vue_component__$i;exports.QuillEditor=__vue_component__$a;exports.Select=__vue_component__$b;exports.Submit=__vue_component__$c;exports.SuggestedValue=__vue_component__$j;exports.TelInput=__vue_component__$g;exports.Textarea=__vue_component__$d;exports.Time=__vue_component__$h;exports.ToggleSwitch=__vue_component__$f;exports.default=plugin;
