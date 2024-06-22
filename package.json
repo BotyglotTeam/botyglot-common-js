@@ -9,12 +9,13 @@
   },
   "contributors": [],
   "license": "Private code that belongs to BOTYGLOT, FRANCE",
+  "type": "module",
   "main": "dist/botyglot-common-js.umd.cjs",
   "module": "dist/botyglot-common-js.js",
   "exports": {
     ".": {
-      "import": "dist/botyglot-common-js.js",
-      "require": "dist/botyglot-common-js.umd.cjs"
+      "import": "./dist/botyglot-common-js.umd.cjs",
+      "require": "./dist/botyglot-common-js.js"
     }
   },
   "files": [

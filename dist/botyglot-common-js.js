@@ -5272,4 +5272,4 @@ export {
   Ci as SuggestedValue,
   Rf as default
 };
-//# sourceMappingURL=botyglot-common-js.mjs.map
+//# sourceMappingURL=botyglot-common-js.js.map
