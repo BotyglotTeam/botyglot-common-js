@@ -4673,8 +4673,8 @@ const jd = /* @__PURE__ */ ke(Vd, [["render", Ud]]), Hd = {
     }
   },
   watch: {
-    values: function(e, t) {
-      this.$props.autoSubmit === "onChange" && this.debounce(750);
+    values(e, t) {
+      this.autoSubmit === "onChange" && this.debounce(750);
     }
   }
 }, Gd = ["accept-charset", "action", "data-values", "method", "enctype"];
@@ -4719,36 +4719,36 @@ const Bd = /* @__PURE__ */ ke(Hd, [["render", qd]]), zd = {
   computed: {
     inputValue: {
       get() {
-        return this.$store.getters.getValue(this.$props.name);
+        return this.$store.getters.getValue(this.name);
       },
       set(e) {
         this.$store.dispatch(
           "update",
           {
             value: e,
-            name: this.$props.name
+            name: this.name
           }
         );
       }
     },
-    suggestValue: function() {
-      return this.$props.suggest_value === "true" || this.$props.suggest_value === !0;
+    suggestValue() {
+      return this.suggest_value === "true" || this.suggest_value === !0;
     },
-    useSuggestedValue: function() {
+    useSuggestedValue() {
       return this.suggestValue;
     },
-    suggestedValue: function() {
-      return this.$store.getters.getSuggestedValues(this.$props.name);
+    suggestedValue() {
+      return this.$store.getters.getSuggestedValues(this.name);
     }
   },
   watch: {
-    suggestedValue: function(e, t) {
+    suggestedValue(e, t) {
       this.useSuggestedValue && (this.inputValue = e);
     }
   }
 }, Zd = ["id", "name"];
 function Jd(e, t, r, n, s, i) {
-  return jn((U(), B("input", Et(this.$attrs, {
+  return jn((U(), B("input", Et(e.$attrs, {
     id: r.id,
     name: r.name,
     "onUpdate:modelValue": t[0] || (t[0] = (a) => i.inputValue = a)
