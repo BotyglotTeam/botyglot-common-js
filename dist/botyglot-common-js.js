@@ -42740,7 +42740,6 @@ class mee {
     hideValidationErrors: d = !1,
     ...p
   }) {
-    Vue.use(Vuex), window.toto = "TOTO";
     let m = {
       "botyglot-time": qM,
       "botyglot-autocomplete": px,
