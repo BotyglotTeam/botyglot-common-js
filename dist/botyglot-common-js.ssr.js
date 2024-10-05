@@ -1,4 +1,4 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _interopDefault(e){return(e&&(typeof e==='object')&&'default'in e)?e['default']:e}var vSelect=_interopDefault(require('vue-select')),kUtilsJs=require('k-utils-js'),lodash=require('lodash'),dateFns=require('date-fns'),flatPickr=_interopDefault(require('vue-flatpickr-component'));require('flatpickr/dist/flatpickr.css');var R=require('ramda'),dateFnsTz=require('date-fns-tz'),ConfirmDatePlugin=_interopDefault(require('flatpickr/dist/plugins/confirmDate/confirmDate'));require('flatpickr/dist/plugins/confirmDate/confirmDate.css');var Monaco=_interopDefault(require('vue-monaco')),vue2Editor=require('vue2-editor'),Vue=_interopDefault(require('vue/dist/vue.esm.js')),Vuex=_interopDefault(require('vuex'));require('intl-tel-input/build/css/intlTelInput.css');var intlTelInput=_interopDefault(require('intl-tel-input')),botyglotCommonJs_esm=require('botyglot-common-js/dist/botyglot-common-js.esm');//
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _interopDefault(e){return(e&&(typeof e==='object')&&'default'in e)?e['default']:e}var vSelect=_interopDefault(require('vue-select')),kUtilsJs=require('k-utils-js'),lodash=require('lodash'),dateFns=require('date-fns'),flatPickr=_interopDefault(require('vue-flatpickr-component'));require('flatpickr/dist/flatpickr.css');var R=require('ramda'),dateFnsTz=require('date-fns-tz'),ConfirmDatePlugin=_interopDefault(require('flatpickr/dist/plugins/confirmDate/confirmDate'));require('flatpickr/dist/plugins/confirmDate/confirmDate.css');var Monaco=_interopDefault(require('vue-monaco')),vue2Editor=require('vue2-editor'),Vue=_interopDefault(require('vue/dist/vue.esm.js')),Vuex=_interopDefault(require('vuex'));require('intl-tel-input/build/css/intlTelInput.css');var intlTelInput=_interopDefault(require('intl-tel-input'));//
 //
 //
 //
@@ -2789,8 +2789,9 @@ var __vue_staticRenderFns__$h = [];
     undefined,
     undefined
   );//
+
 var script$i = {
-  components: { ComponentWrapper: botyglotCommonJs_esm.ComponentWrapper, ErrorsPlaceholder: botyglotCommonJs_esm.ErrorsPlaceholder },
+  components: { ComponentWrapper: __vue_component__$1, ErrorsPlaceholder: __vue_component__ },
   inheritAttrs: false,
   props: {
     name: {
@@ -2927,7 +2928,7 @@ var __vue_staticRenderFns__$i = [];
   /* scoped */
   var __vue_scope_id__$i = undefined;
   /* module identifier */
-  var __vue_module_identifier__$i = "data-v-43cc3f3a";
+  var __vue_module_identifier__$i = "data-v-19436286";
   /* functional template */
   var __vue_is_functional_template__$i = false;
   /* style inject */
