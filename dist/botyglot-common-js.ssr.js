@@ -1,4 +1,4 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _interopDefault(e){return(e&&(typeof e==='object')&&'default'in e)?e['default']:e}var vSelect=_interopDefault(require('vue-select')),kUtilsJs=require('k-utils-js'),lodash=require('lodash'),dateFns=require('date-fns'),flatPickr=_interopDefault(require('vue-flatpickr-component'));require('flatpickr/dist/flatpickr.css');var R=require('ramda'),dateFnsTz=require('date-fns-tz'),ConfirmDatePlugin=_interopDefault(require('flatpickr/dist/plugins/confirmDate/confirmDate'));require('flatpickr/dist/plugins/confirmDate/confirmDate.css');var Monaco=_interopDefault(require('vue-monaco')),vue2Editor=require('vue2-editor'),Vue=_interopDefault(require('vue/dist/vue.esm.js')),Vuex=_interopDefault(require('vuex'));require('intl-tel-input/build/css/intlTelInput.css');var intlTelInput=_interopDefault(require('intl-tel-input'));//
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _interopDefault(e){return(e&&(typeof e==='object')&&'default'in e)?e['default']:e}var vSelect=_interopDefault(require('vue-select')),kUtilsJs=require('k-utils-js'),lodash=require('lodash'),dateFns=require('date-fns'),flatPickr=_interopDefault(require('vue-flatpickr-component'));require('flatpickr/dist/flatpickr.css');var R=require('ramda'),dateFnsTz=require('date-fns-tz'),ConfirmDatePlugin=_interopDefault(require('flatpickr/dist/plugins/confirmDate/confirmDate'));require('flatpickr/dist/plugins/confirmDate/confirmDate.css');var Monaco=_interopDefault(require('vue-monaco')),vue2Editor=require('vue2-editor'),Vue=_interopDefault(require('vue/dist/vue.esm.js')),Vuex=_interopDefault(require('vuex'));require('intl-tel-input/build/css/intlTelInput.css');var intlTelInput=_interopDefault(require('intl-tel-input')),botyglotCommonJs_esm=require('botyglot-common-js/dist/botyglot-common-js.esm');//
 //
 //
 //
@@ -2789,9 +2789,8 @@ var __vue_staticRenderFns__$h = [];
     undefined,
     undefined
   );//
-
 var script$i = {
-  components: { ComponentWrapper: __vue_component__$1, ErrorsPlaceholder: __vue_component__ },
+  components: { ComponentWrapper: botyglotCommonJs_esm.ComponentWrapper, ErrorsPlaceholder: botyglotCommonJs_esm.ErrorsPlaceholder },
   inheritAttrs: false,
   props: {
     name: {
@@ -2816,11 +2815,6 @@ var script$i = {
       require: false,
       default: true
     },
-  },
-  data: function data () {
-    return {
-      selectedChoices: this.getStoredValues()
-    };
   },
   computed: {
     choicesToJson: function () {
@@ -2888,6 +2882,9 @@ var script$i = {
         });
       }
     },
+    inputName: function () {
+      return(this.$props.name + '[]')
+    }
   },
   watch: {
     suggestedValue: function (value, _oldValue) {
@@ -2895,24 +2892,34 @@ var script$i = {
         this.inputValue = value;
       }
     },
-    selectedChoices: function (newChoices) {
-      this.inputValue = newChoices.join(',');
-    },
-    inputValue: function () {
-      this.selectedChoices = this.getStoredValues();
-    }
   },
   methods: {
-    getStoredValues: function () {
-      var storedValue = this.$store.getters.getValue(this.$props.name);
-      return storedValue ? storedValue.split(',') : [];
+    updateSelection: function updateSelection(event) {
+      // important => do not update directly `values`, instead create a new object,
+      // otherwise the vuejs reactivity might not work as expected
+      var values = this.inputValue || [];
+
+      var value = event.target.value;
+      var index = values.indexOf(value);
+
+      if (event.target.checked) {
+        if (index === -1) {
+
+          this.inputValue = values.concat( [value]);
+        }
+      } else {
+        if (index !== -1) {
+
+          this.inputValue =  values.toSpliced(index, 1);
+        }
+      }
     }
   }
 };/* script */
 var __vue_script__$i = script$i;
 
 /* template */
-var __vue_render__$i = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],attrs:{"type":"hidden","id":_vm.id,"name":_vm.name},domProps:{"value":(_vm.inputValue)},on:{"input":function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value;}}}),_vm._v(" "),_vm._l((_vm.choicesToJson),function(value){return _c('div',{staticClass:"multi_check__flex-container"},[_c('div',{staticClass:"multi_check__checkbox-container"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectedChoices),expression:"selectedChoices"}],staticClass:"multi_check__checkbox-input",attrs:{"type":"checkbox"},domProps:{"value":value.id,"checked":Array.isArray(_vm.selectedChoices)?_vm._i(_vm.selectedChoices,value.id)>-1:(_vm.selectedChoices)},on:{"focus":function($event){_vm.inputTouched = true;},"change":function($event){var $$a=_vm.selectedChoices,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=value.id,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.selectedChoices=$$a.concat([$$v]));}else {$$i>-1&&(_vm.selectedChoices=$$a.slice(0,$$i).concat($$a.slice($$i+1)));}}else {_vm.selectedChoices=$$c;}}}})]),_vm._v(" "),_c('div',{staticClass:"multi_check__label-container"},[_c('label',{staticClass:"multi_check__label-text"},[_vm._v(_vm._s(value.display_name))])])])}),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],2)};
+var __vue_render__$i = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[_vm._l((_vm.choicesToJson),function(value){return _c('div',{staticClass:"multi_check__flex-container"},[_c('div',{staticClass:"multi_check__checkbox-container"},[_c('input',{staticClass:"multi_check__checkbox-input",attrs:{"type":"checkbox","name":_vm.inputName,"id":("id-" + (value.id))},domProps:{"value":value.id,"checked":_vm.inputValue.includes(value.id)},on:{"focus":function($event){_vm.inputTouched = true;},"change":_vm.updateSelection}})]),_vm._v(" "),_c('div',{staticClass:"multi_check__label-container"},[_c('label',{staticClass:"multi_check__label-text",attrs:{"for":("id-" + (value.id))}},[_vm._v(_vm._s(value.display_name))])])])}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],attrs:{"type":"hidden","id":_vm.id,"name":_vm.inputName},domProps:{"value":(_vm.inputValue)},on:{"input":function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value;}}}),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],2)};
 var __vue_staticRenderFns__$i = [];
 
   /* style */
@@ -2920,7 +2927,7 @@ var __vue_staticRenderFns__$i = [];
   /* scoped */
   var __vue_scope_id__$i = undefined;
   /* module identifier */
-  var __vue_module_identifier__$i = "data-v-eacb389a";
+  var __vue_module_identifier__$i = "data-v-43cc3f3a";
   /* functional template */
   var __vue_is_functional_template__$i = false;
   /* style inject */
