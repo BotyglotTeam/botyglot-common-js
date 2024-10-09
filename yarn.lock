@@ -388,9 +388,9 @@
   "version" "2.29.4"
 
 "monaco-editor@>= 0.21.0 < 1", "monaco-editor@>=0.43.0":
-  "integrity" "sha512-xaGwVV1fq343cM7aOYB6lVE4Ugf0UyimdD/x5PWcWBMKENwectaEu77FAN7c5sFiyumqeJdX1RPTh1ocioyDjw=="
-  "resolved" "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.51.0.tgz"
-  "version" "0.51.0"
+  "integrity" "sha512-OeWhNpABLCeTqubfqLMXGsqf6OmPU6pHM85kF3dhy6kq5hnhuVS1p3VrEW/XhWHc71P2tHyS5JFySD8mgs1crw=="
+  "resolved" "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.52.0.tgz"
+  "version" "0.52.0"
 
 "nanoid@^3.3.7":
   "integrity" "sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g=="
