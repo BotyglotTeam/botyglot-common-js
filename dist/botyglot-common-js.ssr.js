@@ -53,7 +53,7 @@ var script = {
     inputError: function () {
       var this$1 = this;
 
-      if (this.inputTouched || this.$props.force === true || this.$props.force === 'true') {
+      if (this.inputTouched) {
         var result = "";
 
         this.computed_names.forEach(function (name) {
@@ -73,7 +73,7 @@ var script = {
     inputWarning: function () {
       var this$1 = this;
 
-      if (this.inputTouched || this.$props.force === true || this.$props.force === 'true') {
+      if (this.inputTouched) {
         var result = "";
 
         this.computed_names.forEach(function (name) {
@@ -100,6 +100,8 @@ var script = {
       get: function get () {
         var this$1 = this;
 
+        if(this.$props.force === true || this.$props.force === 'true') { return true; }
+
         var result = null;
 
         this.computed_names.forEach(function (name) {
@@ -121,8 +123,6 @@ var script = {
         );
       }
     },
-
-
   },
 };function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
@@ -209,7 +209,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-57d79c12";
+  var __vue_module_identifier__ = "data-v-a2635c2a";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */
