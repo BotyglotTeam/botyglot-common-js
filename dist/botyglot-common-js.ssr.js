@@ -7,41 +7,46 @@
 var script = {
   inheritAttrs: false,
   props: {
-   names: { // do not use directly (instead use the computed property computed_names)
-     type: [String, Array],
-     require: true
-   },
-   id: {
-     type: String,
-   }
+    names: { // do not use directly (instead use the computed property computed_names)
+      type: [String, Array],
+      require: true
+    },
+    id: {
+      type: String,
+    },
+    force: {
+      type: [String, Boolean],
+      default: false,
+      require: false,
+    }
   },
   computed: {
-    computed_names: function() {
-          if (typeof this.$props.names === 'string') {
-            return JSON.parse(this.$props.names)
-          } else {
-            return this.$props.names
-          }
+    computed_names: function () {
+      if (typeof this.$props.names === 'string') {
+        return JSON.parse(this.$props.names)
+      } else {
+        return this.$props.names
+      }
 
     },
-    displayValidationError: function(){
-       return this.inputTouched && this.inputError
-     },
-    displayValidationWarning: function(){
-       return this.inputTouched && !this.inputError && this.inputWarning
+    displayValidationError: function () {
+      return (this.inputTouched || this.$props.force || this.$props.force === "true") && this.inputError
     },
-    displayValidationMessage: function(){
+    displayValidationWarning: function () {
+      return (this.inputTouched || this.$props.force || this.$props.force === "true") && !this.inputError && this.inputWarning
+    },
+    displayValidationMessage: function () {
       return this.displayValidationError || this.displayValidationWarning
     },
 
-    inputClass: function() {
+    inputClass: function () {
       return {
         "input-block__error-feedback": this.displayValidationError,
         "input-block__warning-feedback": this.displayValidationWarning
       }
     },
 
-    inputError: function() {
+    inputError: function () {
       var this$1 = this;
 
       if (this.inputTouched) {
@@ -61,7 +66,7 @@ var script = {
         return null
       }
     },
-    inputWarning: function() {
+    inputWarning: function () {
       var this$1 = this;
 
       if (this.inputTouched) {
@@ -83,7 +88,7 @@ var script = {
     },
 
 
-    inputMessage: function(){
+    inputMessage: function () {
       return this.inputError || this.inputWarning
     },
 
@@ -91,13 +96,15 @@ var script = {
       get: function get () {
         var this$1 = this;
 
+        if (this.$props.force || this.$props.force === "true") { return true; }
+
         var result = null;
 
         this.computed_names.forEach(function (name) {
           var touched = this$1.$store.getters.getTouched(name);
 
           // if a non-empty error is found and result is still empty
-          if (touched !== false ) {
+          if (touched !== false) {
             result = touched;
           }
         });
@@ -112,8 +119,6 @@ var script = {
         );
       }
     },
-
-
   },
 };function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
@@ -200,7 +205,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-93304944";
+  var __vue_module_identifier__ = "data-v-c95aaad4";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */
