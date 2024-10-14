@@ -30,12 +30,12 @@ var script = {
 
     },
     displayValidationError: function () {
-      if(this.$props.force === true) { return true; }
+      if(this.$props.force === true || this.$props.force === 'true') { return true; }
 
       return this.inputTouched && this.inputError
     },
     displayValidationWarning: function () {
-      if(this.$props.force === true) { return true; }
+      if(this.$props.force === true || this.$props.force === 'true') { return true; }
 
       return this.inputTouched && !this.inputError && this.inputWarning
     },
@@ -209,7 +209,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-63feca4d";
+  var __vue_module_identifier__ = "data-v-c4d38bf6";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */
