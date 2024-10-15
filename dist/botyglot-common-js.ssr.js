@@ -30,10 +30,10 @@ var script = {
 
     },
     displayValidationError: function () {
-      return (this.inputTouched || this.$props.force || this.$props.force === "true") && this.inputError
+      return this.inputTouched && this.inputError
     },
     displayValidationWarning: function () {
-      return (this.inputTouched || this.$props.force || this.$props.force === "true") && !this.inputError && this.inputWarning
+      return this.inputTouched && !this.inputError && this.inputWarning
     },
     displayValidationMessage: function () {
       return this.displayValidationError || this.displayValidationWarning
@@ -96,7 +96,7 @@ var script = {
       get: function get () {
         var this$1 = this;
 
-        if (this.$props.force || this.$props.force === "true") { return true; }
+        if (this.$props.force === true || this.$props.force === "true") { return true; }
 
         var result = null;
 
@@ -205,7 +205,7 @@ var __vue_staticRenderFns__ = [];
   /* scoped */
   var __vue_scope_id__ = undefined;
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-c95aaad4";
+  var __vue_module_identifier__ = "data-v-c8ff5006";
   /* functional template */
   var __vue_is_functional_template__ = false;
   /* style inject */
