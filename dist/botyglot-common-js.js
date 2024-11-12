@@ -332,7 +332,8 @@ const pt = ["id"], vt = ["innerHTML"], gt = ["name", "value"], mt = {
     },
     clear_option: {
       type: [String, Boolean],
-      required: !0
+      default: !1,
+      required: !1
     },
     name: {
       type: String,
