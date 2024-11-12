@@ -27,11 +27,12 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@guolao/vue-monaco-editor": "^1.5.4",
     "@popperjs/core": "^2.11.5",
+    "@vueup/vue-quill": "^1.2.0",
     "date-fns": "^2.25.0",
     "date-fns-tz": "^1.1.6",
-    "@vueup/vue-quill": "^1.2.0",
-    "@guolao/vue-monaco-editor": "^1.5.4",
+    "flatpickr": "^4.6.13",
     "intl-tel-input": "^17.0.19",
     "k-utils-js": "git+https://github.com/kundigo/k-utils-js.git#master",
     "lodash": "^4.17.21",
@@ -43,7 +44,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "vite": "^4.3.3",
-    "@vitejs/plugin-vue": "^4.2.1"
+    "@vitejs/plugin-vue": "^4.2.1",
+    "vite": "^4.3.3"
   }
 }
