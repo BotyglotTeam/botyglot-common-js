@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: 'botyglot-common-js'
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-flatpickr-component'],
       output: {
         globals: {
           Vue: 'vue',
