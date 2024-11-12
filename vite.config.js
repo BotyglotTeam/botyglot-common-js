@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: 'botyglot-common-js'
     },
     rollupOptions: {
-      external: ['vue', 'vue-flatpickr-component'],
+      external: ['vue', 'vue-flatpickr-component', '@popperjs/core', 'date-fns', 'date-fns-tz', '@vueup/vue-quill', '@guolao/vue-monaco-editor', 'intl-tel-input', 'k-utils-js', 'lodash', 'ramda', 'vue-multiselect', 'vue-select', 'vuex'],
       output: {
         globals: {
           Vue: 'vue',
