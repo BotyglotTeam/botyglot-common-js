@@ -810,12 +810,12 @@
   "version" "1.0.4"
 
 "cipher-base@^1.0.0", "cipher-base@^1.0.1", "cipher-base@^1.0.3":
-  "integrity" "sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q=="
-  "resolved" "https://registry.npmjs.org/cipher-base/-/cipher-base-1.0.4.tgz"
-  "version" "1.0.4"
+  "integrity" "sha512-xq7ICKB4TMHUx7Tz1L9O2SGKOhYMOTR32oir45Bq28/AQTpHogKgHcoYFSdRbMtddl+ozNXfXY9jWcgYKmde0w=="
+  "resolved" "https://registry.npmjs.org/cipher-base/-/cipher-base-1.0.5.tgz"
+  "version" "1.0.5"
   dependencies:
-    "inherits" "^2.0.1"
-    "safe-buffer" "^5.0.1"
+    "inherits" "^2.0.4"
+    "safe-buffer" "^5.2.1"
 
 "class-utils@^0.3.5":
   "integrity" "sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg=="
@@ -1186,9 +1186,9 @@
     "stream-shift" "^1.0.0"
 
 "elliptic@^6.5.3", "elliptic@^6.5.5":
-  "integrity" "sha512-dpwoQcLc/2WLQvJvLRHKZ+f9FgOdjnq11rurqwekGQygGPsYSK29OMMD2WalatiqQ+XGFDglTNixpPfI+lpaAA=="
-  "resolved" "https://registry.npmjs.org/elliptic/-/elliptic-6.6.0.tgz"
-  "version" "6.6.0"
+  "integrity" "sha512-RaddvvMatK2LJHqFJ+YA4WysVN5Ita9E35botqIYspQ4TkRAlCicdzKOjlyv/1Za5RyTNn7di//eEV0uTAfe3g=="
+  "resolved" "https://registry.npmjs.org/elliptic/-/elliptic-6.6.1.tgz"
+  "version" "6.6.1"
   dependencies:
     "bn.js" "^4.11.9"
     "brorand" "^1.1.0"
@@ -1611,12 +1611,12 @@
     "function-bind" "^1.1.1"
 
 "hash-base@^3.0.0", "hash-base@~3.0", "hash-base@~3.0.4":
-  "integrity" "sha512-EeeoJKjTyt868liAlVmcv2ZsUfGHlE3Q+BICOXcZiwN3osr5Q/zFGYmTJpoIzuaSTAwndFy+GqhEwlU4L3j4Ow=="
-  "resolved" "https://registry.npmjs.org/hash-base/-/hash-base-3.0.4.tgz"
-  "version" "3.0.4"
+  "integrity" "sha512-vXm0l45VbcHEVlTCzs8M+s0VeYsB2lnlAaThoLKGXr3bE/VWDOelNUnycUPEhKEaXARL2TEFjBOyUiM6+55KBg=="
+  "resolved" "https://registry.npmjs.org/hash-base/-/hash-base-3.0.5.tgz"
+  "version" "3.0.5"
   dependencies:
-    "inherits" "^2.0.1"
-    "safe-buffer" "^5.0.1"
+    "inherits" "^2.0.4"
+    "safe-buffer" "^5.2.1"
 
 "hash-sum@^1.0.2":
   "integrity" "sha512-fUs4B4L+mlt8/XAtSOGMUO1TXmAelItBPtJG7CyHJfYTdDjwisntGO2JQz7oUsatOY9o68+57eziUVNw/mRHmA=="
@@ -2812,9 +2812,9 @@
   "version" "2.3.1"
 
 "qs@^6.12.3":
-  "integrity" "sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg=="
-  "resolved" "https://registry.npmjs.org/qs/-/qs-6.13.0.tgz"
-  "version" "6.13.0"
+  "integrity" "sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg=="
+  "resolved" "https://registry.npmjs.org/qs/-/qs-6.13.1.tgz"
+  "version" "6.13.1"
   dependencies:
     "side-channel" "^1.0.6"
 
