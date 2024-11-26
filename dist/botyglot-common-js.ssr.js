@@ -253,7 +253,8 @@ var script$1 = {
   computed: {
     isEmpty: function isEmpty () {
       var value = this.$store.getters.getValue(this.$props.name);
-      return value === undefined || value === null || value === '';
+
+      return value === undefined || value === null || value === '' || (Array.isArray(value) && this.sanitizeArray(value).length === 0);
     },
     inputGroupClass: function inputGroupClass () {
       return {
@@ -262,6 +263,11 @@ var script$1 = {
       }
     },
   },
+  methods: {
+    sanitizeArray: function sanitizeArray (array) {
+      return array.filter(function (item) { return item !== ""; });
+    },
+  }
 };/* script */
 var __vue_script__$1 = script$1;
 
@@ -274,7 +280,7 @@ var __vue_staticRenderFns__$1 = [];
   /* scoped */
   var __vue_scope_id__$1 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$1 = "data-v-dd141bde";
+  var __vue_module_identifier__$1 = "data-v-8970a334";
   /* functional template */
   var __vue_is_functional_template__$1 = false;
   /* style inject */
