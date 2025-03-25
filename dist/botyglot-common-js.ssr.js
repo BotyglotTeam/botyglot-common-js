@@ -2424,7 +2424,7 @@ var script$f = {
 var __vue_script__$f = script$f;
 
 /* template */
-var __vue_render__$f = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[_c('label',{class:_vm.inputClass,attrs:{"for":_vm.id}},[(_vm.showLabels)?_c('span',{staticClass:"toggle-label-prepend"},[_vm._v(_vm._s(_vm.off_label))]):_vm._e(),_vm._v(" "),_c('input',{attrs:{"type":"hidden","name":_vm.name},domProps:{"value":_vm.off_value}}),_vm._v(" "),_c('input',_vm._b({ref:"input",staticClass:"toggle_switch_component__input",attrs:{"id":_vm.id,"name":_vm.name,"type":"checkbox","disabled":_vm.disabled},domProps:{"checked":_vm.inputValue === _vm.on_value,"value":_vm.on_value},on:{"focus":function($event){_vm.inputTouched=true;},"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"space",32,$event.key,[" ","Spacebar"])){ return null; }$event.preventDefault();return _vm.toggleInputValue.apply(null, arguments)},"click":_vm.toggleInputValue}},'input',this.$attrs,false)),_vm._v(" "),_c('span',{staticClass:"toggle_switch_component__display",attrs:{"hidden":""}}),_vm._v(" "),(_vm.showLabels)?_c('span',{staticClass:"toggle-label-append"},[_vm._v(_vm._s(_vm.on_label))]):_vm._e(),_vm._v(" "),(!_vm.showLabels)?_c('p',[_vm._v(_vm._s(_vm.inputLabel))]):_vm._e()]),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
+var __vue_render__$f = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[_c('label',{class:_vm.inputClass,attrs:{"for":_vm.id}},[(_vm.showLabels)?_c('span',{staticClass:"toggle-label-prepend"},[_vm._v(_vm._s(_vm.off_label))]):_vm._e(),_vm._v(" "),_c('input',{attrs:{"type":"hidden","name":_vm.name},domProps:{"value":_vm.off_value}}),_vm._v(" "),_c('input',_vm._b({ref:"input",staticClass:"toggle_switch_component__input",attrs:{"id":_vm.id,"name":_vm.name,"type":"checkbox","disabled":_vm.disabled},domProps:{"checked":_vm.inputValue === _vm.on_value,"value":_vm.on_value},on:{"focus":function($event){_vm.inputTouched=true;},"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"space",32,$event.key,[" ","Spacebar"])){ return null; }$event.preventDefault();return _vm.toggleInputValue.apply(null, arguments)},"click":_vm.toggleInputValue}},'input',this.$attrs,false)),_vm._v(" "),_c('span',{staticClass:"toggle_switch_component__display"}),_vm._v(" "),(_vm.showLabels)?_c('span',{staticClass:"toggle-label-append"},[_vm._v(_vm._s(_vm.on_label))]):_vm._e(),_vm._v(" "),(!_vm.showLabels)?_c('p',[_vm._v(_vm._s(_vm.inputLabel))]):_vm._e()]),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
 var __vue_staticRenderFns__$f = [];
 
   /* style */
@@ -2432,7 +2432,7 @@ var __vue_staticRenderFns__$f = [];
   /* scoped */
   var __vue_scope_id__$f = undefined;
   /* module identifier */
-  var __vue_module_identifier__$f = "data-v-4faf86f4";
+  var __vue_module_identifier__$f = "data-v-bb3b112c";
   /* functional template */
   var __vue_is_functional_template__$f = false;
   /* style inject */
