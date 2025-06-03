@@ -620,13 +620,6 @@ var __vue_staticRenderFns__$3 = [];
 var script$4 = {
   data: function data () {
     return {
-      config: {
-        dateFormat: this.pickerFormat(),
-        allowInput: true,
-        locale: {
-          firstDayOfWeek: this.$props.first_day_of_week,
-        }
-      },
       debouncedSetFormattedValue: lodash.debounce(this.setFormattedValue, 500),
     };
   },
@@ -674,9 +667,32 @@ var script$4 = {
       type: Number,
       default: 1,
       require: false,
+    },
+    disable_week_end: {
+      type: Boolean,
+      require: false,
+      default: false,
     }
   },
   computed: {
+    config: function config() {
+      var baseConfig = {
+        dateFormat: this.pickerFormat(),
+        allowInput: true,
+        locale: {
+          firstDayOfWeek: this.$props.first_day_of_week,
+        }
+      };
+
+      if (this.$props.disable_week_end) {
+        baseConfig.disable = [
+          function (date) { return [0, 6].includes(date.getDay()); } // Sunday (0) and Saturday (6)
+        ];
+      }
+
+      return baseConfig;
+    },
+
     displayValidationError: function () {
       return this.inputTouched && this.inputError;
     },
@@ -834,7 +850,7 @@ var __vue_staticRenderFns__$4 = [];
   /* scoped */
   var __vue_scope_id__$4 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$4 = "data-v-13d5e405";
+  var __vue_module_identifier__$4 = "data-v-9f1a59b6";
   /* functional template */
   var __vue_is_functional_template__$4 = false;
   /* style inject */
@@ -861,16 +877,6 @@ var __vue_staticRenderFns__$4 = [];
 var script$5 = {
   data: function data () {
     return {
-      config: {
-        dateFormat: this.pickerFormat(),
-        allowInput: true,
-        enableTime: true,
-        time_24hr: true,
-        locale: {
-          firstDayOfWeek: this.$props.first_day_of_week,
-        },
-        "plugins": [new ConfirmDatePlugin({ confirmText: "Done" })]
-      },
       debouncedSetFormattedValue: lodash.debounce(this.setFormattedValue, 500),
     };
   },
@@ -919,9 +925,36 @@ var script$5 = {
       type: Number,
       default: 1,
       require: false,
+    },
+    disable_week_end: {
+      type: Boolean,
+      require: false,
+      default: false,
     }
   },
   computed: {
+    config: function config () {
+      // Base configuration
+      var baseConfig = {
+        dateFormat: this.pickerFormat(),
+        allowInput: true,
+        enableTime: true,
+        time_24hr: true,
+        locale: {
+          firstDayOfWeek: this.$props.first_day_of_week,
+        },
+        plugins: [new ConfirmDatePlugin({ confirmText: "Done" })]
+      };
+
+      // Conditionally add weekend disabling
+      if (this.$props.disable_week_end) {
+        baseConfig.disable = [
+          function (date) { return [0, 6].includes(date.getDay()); } // Sunday (0) and Saturday (6)
+        ];
+      }
+
+      return baseConfig;
+    },
     displayValidationError: function () {
       return this.inputTouched && this.inputError;
     },
@@ -1090,7 +1123,7 @@ var __vue_staticRenderFns__$5 = [];
   /* scoped */
   var __vue_scope_id__$5 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$5 = "data-v-29465361";
+  var __vue_module_identifier__$5 = "data-v-eef9be3c";
   /* functional template */
   var __vue_is_functional_template__$5 = false;
   /* style inject */
