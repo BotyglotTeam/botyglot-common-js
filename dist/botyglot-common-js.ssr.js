@@ -623,6 +623,9 @@ var script$4 = {
       config: {
         dateFormat: this.pickerFormat(),
         allowInput: true,
+        locale: {
+          firstDayOfWeek: this.$props.first_day_of_week,
+        }
       },
       debouncedSetFormattedValue: lodash.debounce(this.setFormattedValue, 500),
     };
@@ -667,6 +670,11 @@ var script$4 = {
       require: false,
       default: "dd/MM/yyyy",
     },
+    first_day_of_week: {
+      type: Number,
+      default: 1,
+      require: false,
+    }
   },
   computed: {
     displayValidationError: function () {
@@ -826,7 +834,7 @@ var __vue_staticRenderFns__$4 = [];
   /* scoped */
   var __vue_scope_id__$4 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$4 = "data-v-1616b08e";
+  var __vue_module_identifier__$4 = "data-v-13d5e405";
   /* functional template */
   var __vue_is_functional_template__$4 = false;
   /* style inject */
@@ -858,6 +866,9 @@ var script$5 = {
         allowInput: true,
         enableTime: true,
         time_24hr: true,
+        locale: {
+          firstDayOfWeek: this.$props.first_day_of_week,
+        },
         "plugins": [new ConfirmDatePlugin({ confirmText: "Done" })]
       },
       debouncedSetFormattedValue: lodash.debounce(this.setFormattedValue, 500),
@@ -903,6 +914,11 @@ var script$5 = {
       type: String,
       require: true,
 
+    },
+    first_day_of_week: {
+      type: Number,
+      default: 1,
+      require: false,
     }
   },
   computed: {
@@ -1074,7 +1090,7 @@ var __vue_staticRenderFns__$5 = [];
   /* scoped */
   var __vue_scope_id__$5 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$5 = "data-v-b96a9e8a";
+  var __vue_module_identifier__$5 = "data-v-29465361";
   /* functional template */
   var __vue_is_functional_template__$5 = false;
   /* style inject */
