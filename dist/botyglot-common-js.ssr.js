@@ -1191,9 +1191,9 @@ var script$6 = {
     },
     inputClass: function () {
       return {
-        "input-block__field": true,
-        "input-block__field--invalid": (this.inputTouched && this.inputError),
-        "input-block__field--warning": (this.inputTouched && !this.inputError && this.inputWarning)
+        "botyglot--form-component--field--input": true,
+        "botyglot--form-component--field--invalid": (this.inputTouched && this.inputError),
+        "botyglot--form-component--field--warning": (this.inputTouched && !this.inputError && this.inputWarning)
       }
     },
 
@@ -1255,7 +1255,7 @@ var script$6 = {
 var __vue_script__$6 = script$6;
 
 /* template */
-var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[(_vm.prepend)?_c('div',{staticClass:"input-block__prepend",attrs:{"id":_vm.id + '__prepend'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.prepend)}})]):_vm._e(),_vm._v(" "),(((this.$attrs).type)==='checkbox')?_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.inputValue)?_vm._i(_vm.inputValue,null)>-1:(_vm.inputValue)},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$a=_vm.inputValue,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.inputValue=$$a.concat([$$v]));}else {$$i>-1&&(_vm.inputValue=$$a.slice(0,$$i).concat($$a.slice($$i+1)));}}else {_vm.inputValue=$$c;}}}},'input',this.$attrs,false)):(((this.$attrs).type)==='radio')?_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"type":"radio"},domProps:{"checked":_vm._q(_vm.inputValue,null)},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){_vm.inputValue=null;}}},'input',this.$attrs,false)):_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:[_vm.inputClass, _vm.prepend ? 'input--has-prepend' : '', _vm.append ? 'input--has-append' : ''],attrs:{"id":_vm.id,"name":_vm.name,"type":(this.$attrs).type},domProps:{"value":(_vm.inputValue)},on:{"focus":function($event){_vm.inputTouched=true;},"input":function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value;}}},'input',this.$attrs,false)),_vm._v(" "),(_vm.append)?_c('div',{staticClass:"input-block__append",attrs:{"id":_vm.id + '__append'}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.append)}})]):_vm._e(),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
+var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ComponentWrapper',{attrs:{"name":_vm.name,"classes":_vm.inputGroupClass,"id":_vm.id}},[_c('div',{staticClass:"botyglot--form-component--field--wrapper"},[(_vm.prepend)?_c('div',{staticClass:"botyglot--form-component--field--prepend",attrs:{"id":_vm.id + '__prepend'},domProps:{"innerHTML":_vm._s(_vm.prepend)}}):_vm._e(),_vm._v(" "),(((this.$attrs).type)==='checkbox')?_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:_vm.inputClass,attrs:{"id":_vm.id,"name":_vm.name,"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.inputValue)?_vm._i(_vm.inputValue,null)>-1:(_vm.inputValue)},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){var $$a=_vm.inputValue,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.inputValue=$$a.concat([$$v]));}else {$$i>-1&&(_vm.inputValue=$$a.slice(0,$$i).concat($$a.slice($$i+1)));}}else {_vm.inputValue=$$c;}}}},'input',this.$attrs,false)):(((this.$attrs).type)==='radio')?_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:_vm.inputClass,attrs:{"id":_vm.id,"name":_vm.name,"type":"radio"},domProps:{"checked":_vm._q(_vm.inputValue,null)},on:{"focus":function($event){_vm.inputTouched=true;},"change":function($event){_vm.inputValue=null;}}},'input',this.$attrs,false)):_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],class:_vm.inputClass,attrs:{"id":_vm.id,"name":_vm.name,"type":(this.$attrs).type},domProps:{"value":(_vm.inputValue)},on:{"focus":function($event){_vm.inputTouched=true;},"input":function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value;}}},'input',this.$attrs,false)),_vm._v(" "),(_vm.append)?_c('div',{staticClass:"botyglot--form-component--field--append",attrs:{"id":_vm.id + '__append'},domProps:{"innerHTML":_vm._s(_vm.append)}}):_vm._e()]),_vm._v(" "),(_vm.displayError)?_c('ErrorsPlaceholder',{attrs:{"names":[_vm.name]}}):_vm._e()],1)};
 var __vue_staticRenderFns__$6 = [];
 
   /* style */
@@ -1263,7 +1263,7 @@ var __vue_staticRenderFns__$6 = [];
   /* scoped */
   var __vue_scope_id__$6 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$6 = "data-v-79b10f76";
+  var __vue_module_identifier__$6 = "data-v-09b9dbb4";
   /* functional template */
   var __vue_is_functional_template__$6 = false;
   /* style inject */
